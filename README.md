@@ -7,7 +7,7 @@ The image consists of a web server which includes the following features:-
 * mysql-for creating databases
 * net-tools - for basic commands like ifconfig, netstat, wget etc.
 The second image that i used was a precreated image mysql:5.7 .
-In this project my own webpage “myths about coronavirus” is running on top of the webserver container launched by the webserver image. This webpage consists of an input box in which the email and names are to filled . I have linked mysql database server with this container. The information about the names and the emails will automatically go and get stored in the database. 
+In this project my own webpage “myths about coronavirus” is running on top of the webserver container launched by the webserver image. This webpage consists of an input box in which the email and names are to filled . I have linked mysql database server with this container. The information about the names and the emails will automatically go and get stored in the database. This project has the issue that the IP is not dynamic and is hardcoded in the php file. 
 ## Pre-requisites
 * linux operating system
 * virtual box to host the linux operating system
