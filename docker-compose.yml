@@ -1,0 +1,26 @@
+version: '3'
+
+services:
+        web:
+                image: khushi09/webserver:v1
+                volumes:
+                        - mystorage:/var/www/html
+                ports:
+                        - 8080:80
+                restart: always
+                stdin_open: true
+                tty: true
+                depends_on:
+                        - sql
+
+        sql:
+                image: mysql:5.7
+                volumes:
+                        - mystorage1:/var/lib/mysql:rw
+                restart: always
+                environment:
+                        MYSQL_ROOT_PASSWORD: redhat
+                        MYSQL_DATABASE: db
+volumes:
+        mystorage:
+        mystorage1:
